@@ -19,21 +19,31 @@ header{
 }
 
 #title-description{
+    width: 18rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0px 40px 0px 0px;
 }
 
 #title{
-    margin: 5px 5px 0px 5px;
-    
+    margin: 0px 0px 5px 0px;
+    font-weight: 600;
+    font-size: larger;
 }
 #description{
-    margin: 5px;
     height: 100px;
-    resize: vertical;
 }
-#addBtn{
+
+main{
+    width: 100%;
+}
+
+main #newTodoContainer {
     margin: 10px
+}
+
+main #deleteBtn{
+    margin: 10px;
 }
