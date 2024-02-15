@@ -36,6 +36,16 @@ header{
     height: 100px;
 }
 
+#addSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#exampleColorInput{
+    margin-bottom: 20px;;
+}
+
 main{
     width: 100%;
 }

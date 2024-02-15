@@ -2,17 +2,24 @@ const title = document.getElementById('title');
 const description = document.getElementById('description');
 const mainSection = document.getElementById('main-section');
 
+
 let todoID = 1;
 
 function onAdd(){
     const titleValue = title.value;
+    const validateTitleValue = titleValue.trim();
     const descriptionValue = description.value;
+    const color = document.getElementById('exampleColorInput').value;
+    console.log(color)
 
-    const newTodoID = `todo_${todoID}`;
+    if(!validateTitleValue){
+        alert("please add something")
+    }else{
+        const newTodoID = `todo_${todoID}`;
 
     const newTodo = `
-    <div id="${newTodoID}"  style="display: flex; align-items: center; margin-bottom: 10px;">
-        <div class="card" style="width: 18rem;">
+    <div id="${newTodoID}"  style="display: flex; align-items: center; margin-bottom: 10px; border-radius: 10px">
+        <div class="card" style="width: 18rem; background-color: ${color}">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: larger; font-weight: 600;">${titleValue}</h5>
 
@@ -41,6 +48,7 @@ function onAdd(){
     description.value = '';
 
     todoID++;
+    }
 }
 
 function onDelete(todoID){
